@@ -1,0 +1,21 @@
+.textinput {
+  box-sizing: border-box;
+  padding: 1% 2%;
+  outline: none;
+  transition: all .3s ease;
+  border: solid;
+}
+
+.textinput:active {
+  opacity: 0.5;
+}
+
+.vanishingPlaceholder:focus::placeholder {
+  transition: all .3s ease;
+  opacity: 0;
+}
+
+.inputshadow:focus {
+  transition: all .3s ease;
+  box-shadow: 0 0 12px 2px rgba(0, 0, 0, 0.25);
+}
