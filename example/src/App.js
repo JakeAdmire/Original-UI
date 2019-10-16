@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 
-import ExampleComponent from 'original-ui'
+import { TextInput } from 'original-ui'
 
 export default class App extends Component {
   render () {
     return (
       <div>
-        <ExampleComponent text='Modern React component module' />
+        <TextInput placeholder="test" />
       </div>
     )
   }
