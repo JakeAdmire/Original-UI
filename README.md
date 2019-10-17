@@ -47,15 +47,46 @@ import { TextInput } from  'original-ui'
 
 |Parameter| Data Type | Default Value | Description |
 |--|--|--|--|
-| `placeholder` | `String` | `null` | _pass a string to display as a placeholder_ |
-| `vanishingPlaceholder` | `Boolean` | `true` | _pass a boolean to determine whether you want the placeholder text to fade on focus_ |
-| `width` | `String` | `100%` | _pass a string to constrict the component's width_ |
-| `height` | `String` | `50px` | _pass a string to constrict the component's height_ |
-| `fontsize` | `String` | `16px` | _pass a string to constrict the component's font size_ |
-| `showShadow` | `Boolean` | `true` | _pass a boolean to determine whether you want the component to display a drop shadow_ |
-| `border` | `String` | `orangered` | _pass a string to set the component's border color_ |
-| `radius` | `String` | `10px` | _pass a string to set the component's border radius_ |
-| `changeMethod` | `Function` | `null` | _pass a method that will receive the `event` object as a parameter_ |
+| `placeholder` | `String` | `null` | _Pass a string to display as a placeholder_ |
+| `vanishingPlaceholder` | `Boolean` | `true` | _Pass a boolean to determine whether you want the placeholder text to fade on focus_ |
+| `width` | `String` | `'100%'` | _Pass a string to constrict the component's width_ |
+| `height` | `String` | `'50px'` | _Pass a string to constrict the component's height_ |
+| `fontsize` | `String` | `'16px'` | _Pass a string to constrict the component's font size_ |
+| `showShadow` | `Boolean` | `true` | _Pass a boolean to determine whether you want the component to display a drop shadow_ |
+| `border` | `String` | `'orangered'` | _Pass a string to set the component's border color_ |
+| `radius` | `String` | `'10px'` | _Pass a string to set the component's border radius_ |
+| `changeMethod` | `Function` | `null` | _Pass a method that will receive the `event` object as a parameter_ |
+---
+
+### Icon
+
+**OriginalUI** utilizes [Font Awesome](fontawesome.com) to build it's icons. To take advantage of this component you must first follow the instructions at [fontawesome.com](fontawesome.com) and implement the `<script>` tag within the enclosing `<head>` tags of your `index.html` file.
+
+#### Usage:
+
+```javascript
+import { Icon } from  'original-ui'
+
+<Icon  name='skull' />
+```
+
+#### Result:
+
+<img width="101" alt="Screen Shot 2019-10-17 at 4 32 57 PM" src="https://user-images.githubusercontent.com/44077214/67052587-db681600-f0fb-11e9-916d-d6e7510c04ef.png">
+
+#### Parameters:
+
+|Parameter| Data Type | Default Value | Description |
+|--|--|--|--|
+| `name` | `String` | `null` | Pass a string with the name of a Font Awesome icon to build the icon |
+| `style` | `String` | `'Solid'` | _Pass a string of 'Solid', 'Regular', 'Light', 'Duotone', or 'Brands' to determine the icon style. Only 'Solid' & 'Brands' are included by Font Awesome for free_ |
+| `size` | `String` | `'24px'` | _Pass a string to constrict the icon's size_ |
+| `color` | `String` | `'orangered'` | _Pass a string to set the icon's color_ |
+| `rotate` | `String` | `null` | _Pass a string of '90', '180', or '270' to rotate the icon to that degree_ |
+| `verticalFlip` | `Boolean` | `false` | _Pass a boolean to determine whether the icon is flipped vertically_ |
+| `horizontalFlip` | `Boolean` | `false` | _Pass a boolean to determine whether the icon is flipped horizontally_ |
+| `spin` | `Boolean` | `false` | _Pass a boolean to determine whether the icon spins continuously_ |
+| `pulse` | `Boolean` | `false` | _Pass a boolean to determine whether the icon pulses continuously_ |
 ---
 
 ## License
