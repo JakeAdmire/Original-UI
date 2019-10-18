@@ -6,6 +6,8 @@ import styles from './styles.css'
 export class TextInput extends Component {
   static propTypes = {
     placeholder: PropTypes.string,
+    labelText: PropTypes.string,
+    labelColor: PropTypes.string,
     width: PropTypes.string,
     height: PropTypes.string,
     fontsize: PropTypes.string,
@@ -13,12 +15,37 @@ export class TextInput extends Component {
     border: PropTypes.string,
     radius: PropTypes.string,
     vanishingPlaceholder: PropTypes.bool,
-    changeMethod: PropTypes.func
+    changeMethod: PropTypes.func,
+    passwordInput: PropTypes.bool,
+    leftIcon: PropTypes.object,
+    rightIcon: PropTypes.object
   };
+
+  constructor(props) {
+    super(props)
+    this.state = {
+      inputValue: '',
+      isShadowShown: null
+    }
+  }
+
+  updateShadow = () => {
+    this.setState({
+      isShadowShown: !this.state.isShadowShown
+    })
+  }
+
+  updateValue = (e) => {
+    this.setState({
+      inputValue: e.target.value
+    })
+  }
 
   render() {
     const {
       placeholder,
+      labelText,
+      labelColor = 'orangered',
       width = '100%',
       height = '50px',
       fontsize = '16px',
@@ -26,30 +53,73 @@ export class TextInput extends Component {
       border = 'orangered',
       radius = '10px',
       vanishingPlaceholder = true,
-      changeMethod
+      changeMethod = null,
+      passwordInput = false,
+      leftIcon,
+      rightIcon
     } = this.props
 
-    let inlineStyles = {
+    let inputInlineStyles = {
+      fontSize: fontsize
+    }
+
+    let divInlineStyles = {
       width: width,
       height: height,
-      fontSize: fontsize,
+      border: 'solid',
       borderColor: border,
       borderRadius: radius
     }
 
+    let labelInlineStyles = {
+      color: labelColor
+    }
+
     let inputClass = `
       ${styles.textinput} 
-      ${showShadow && styles.inputshadow}
       ${vanishingPlaceholder && styles.vanishingPlaceholder}
     `
 
+    let divClass = `
+      ${styles.wrapperdiv}
+      ${this.state.isShadowShown && styles.inputshadow}
+    `
+
     return (
-      <input
-        className={inputClass}
-        placeholder={placeholder || null}
-        style={inlineStyles}
-        onChange={changeMethod !== null ? (e) => changeMethod(e) : null}
-      />
+      <div>
+        {
+          labelText && labelText.length &&
+            <label
+              htmlFor={styles.textinput}
+              className={styles.inputlabel}
+              style={labelInlineStyles}
+            >
+              {labelText}
+            </label>
+        }
+        <div
+          className={divClass}
+          style={divInlineStyles}
+        >
+          {
+            leftIcon && leftIcon.props && leftIcon
+          }
+          <input
+            type={passwordInput ? 'password' : 'text'}
+            value={this.state.inputValue}
+            id={styles.textinput}
+            className={inputClass}
+            placeholder={placeholder || null}
+            style={inputInlineStyles}
+            onChange={(e) => this.updateValue(e) && (changeMethod !== null ? (e) => changeMethod(e) : null)}
+            onFocus={showShadow ? this.updateShadow : null}
+            onBlur={showShadow ? this.updateShadow : null}
+          />
+          {
+            rightIcon && rightIcon.props && rightIcon
+          }
+        </div>
+      </div>
     )
   }
 }
