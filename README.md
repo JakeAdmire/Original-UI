@@ -43,7 +43,7 @@ import { TextInput } from  'original-ui'
 
 #### Result:
 
-<img width="761" alt="Screen Shot 2019-10-16 at 5 32 17 PM" src="https://user-images.githubusercontent.com/44077214/66966579-f45cc280-f03a-11e9-9e92-9583aea23906.png">
+<img width="890" alt="Screen Shot 2019-10-17 at 8 19 12 PM" src="https://user-images.githubusercontent.com/44077214/67060801-7b816780-f11b-11e9-8af7-8ef8c5eccb12.png">
 
 
 #### Parameters:
@@ -51,6 +51,11 @@ import { TextInput } from  'original-ui'
 |Parameter| Data Type | Default Value | Description |
 |--|--|--|--|
 | `placeholder` | `String` | `null` | _Pass a string to display as a placeholder_ |
+| labelText | `String` | `null` | _Pass a string to display as a label_ |
+| labelColor | `String` | `'orangered'` | _Pass a string to set the label's color_ |
+| passwordInput | `Boolean` | `false` | _Pass a boolean to determine whether you want the input's text obscured_ |
+| leftIcon | `Component` | `null` | _Pass an [Icon](#icon) or Button component to display on the left side of the input_ |
+| rightIcon | `Component` | `null` | _Pass an [Icon](#icon) or Button component to display on the right side of the input_ |
 | `vanishingPlaceholder` | `Boolean` | `true` | _Pass a boolean to determine whether you want the placeholder text to fade on focus_ |
 | `width` | `String` | `'100%'` | _Pass a string to constrict the component's width_ |
 | `height` | `String` | `'50px'` | _Pass a string to constrict the component's height_ |
