@@ -4,6 +4,8 @@
 
   [![NPM](https://img.shields.io/npm/v/original-ui.svg)](https://www.npmjs.com/package/original-ui) 
   [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+  [![Build Status](https://travis-ci.org/JakeAdmire/original-ui.svg?branch=master)](https://travis-ci.org/JakeAdmire/original-ui)
+  [![Coverage Status](https://coveralls.io/repos/github/JakeAdmire/original-ui/badge.svg?branch=ci-testing-deployment-setup)](https://coveralls.io/github/JakeAdmire/original-ui?branch=ci-testing-deployment-setup)
 
 </div>
 
