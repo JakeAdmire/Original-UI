@@ -13,35 +13,23 @@
 npm install --save original-ui
 ```
 
-## Usage
-
-```jsx
-import React, { Component } from 'react'
-
-import MyComponent from 'original-ui'
-
-class Example extends Component {
-  render () {
-    return (
-      <MyComponent />
-    )
-  }
-}
-```
-
 ## Components
 
 ### TextInput
 
-#### Usage:
+#### Example Usage:
 
 ```javascript
 import { TextInput } from  'original-ui'
 
-<TextInput  placeholder="Why don't you enter some text..."  />
+<TextInput 
+  placeholder="ex. 'thoughtfulpassword123...'" 
+  labelText='Enter your password:' 
+  rightIcon={<Icon name='eye-slash' />}
+/>
 ```
 
-#### Result:
+**Result:**
 
 <img width="890" alt="Screen Shot 2019-10-17 at 8 19 12 PM" src="https://user-images.githubusercontent.com/44077214/67060801-7b816780-f11b-11e9-8af7-8ef8c5eccb12.png">
 
@@ -70,7 +58,7 @@ import { TextInput } from  'original-ui'
 
 **OriginalUI** utilizes [Font Awesome](fontawesome.com) to build it's icons. To take advantage of this component you must first follow the instructions at [fontawesome.com](fontawesome.com) and implement the `<script>` tag within the enclosing `<head>` tags of your `index.html` file.
 
-#### Usage:
+#### Example Usage:
 
 ```javascript
 import { Icon } from  'original-ui'
@@ -78,7 +66,7 @@ import { Icon } from  'original-ui'
 <Icon  name='skull' />
 ```
 
-#### Result:
+**Result:**
 
 <img width="101" alt="Screen Shot 2019-10-17 at 4 32 57 PM" src="https://user-images.githubusercontent.com/44077214/67052587-db681600-f0fb-11e9-916d-d6e7510c04ef.png">
 
