@@ -6,8 +6,11 @@ export default class App extends Component {
   render () {
     return (
       <div>
-        <TextInput placeholder="test" />
-        <Icon name='skull' />
+        <TextInput 
+          placeholder="ex. 'thoughtfulpassword123...'" 
+          labelText='Enter your password:' 
+          rightIcon={<Icon name='eye-slash' />}
+        />
       </div>
     )
   }
