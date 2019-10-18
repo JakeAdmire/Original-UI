@@ -8,7 +8,7 @@ cache:
 script:
   - npm test -- --collectCoverage=true
   - npm run build
-  - COVERALLS_TOKEN npm run coveralls
+  - npm run coveralls
 addons:
   artifacts: true
 deploy:
