@@ -87,7 +87,14 @@ import { Icon } from  'original-ui'
 | `horizontalFlip` | `Boolean` | `false` | _Pass a boolean to determine whether the icon is flipped horizontally_ |
 | `spin` | `Boolean` | `false` | _Pass a boolean to determine whether the icon spins continuously_ |
 | `pulse` | `Boolean` | `false` | _Pass a boolean to determine whether the icon pulses continuously_ |
----
+
+## Credits & Dependencies
+
+[create-react-library](https://www.npmjs.com/package/create-react-library) *- React library bootstrap CLI*
+[React.js](https://reactjs.org/) *- JavaScript UI library*
+[Jest](https://jestjs.io/) *- JavaScript testing framework*
+[TravisCI](https://travis-ci.org/) *- Continuous integration*
+[Coveralls.io](https://coveralls.io/) *- Code coverage testing*
 
 ## License
 
