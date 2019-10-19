@@ -1,5 +1,7 @@
 <h1 align="center">OriginalUI<h1/>
 
+<p align="center">A totally <strong>original</strong> component library built for <a href="https://reactjs.org">React.js</a></p>
+
 <div align="center">
 
   [![NPM](https://img.shields.io/npm/v/original-ui.svg)](https://www.npmjs.com/package/original-ui) 
@@ -8,6 +10,15 @@
   [![Coverage Status](https://coveralls.io/repos/github/JakeAdmire/original-ui/badge.svg?branch=ci-testing-deployment-setup)](https://coveralls.io/github/JakeAdmire/original-ui?branch=ci-testing-deployment-setup)
 
 </div>
+
+## Directory
+
+- [Install](#install)
+- [Components](#components)
+	- [TextInput](#textinput)
+	- [Icon](#icon)
+- [Credits & Dependencies](#credits-&-dependencies)
+- [License](#license)
 
 ## Install
 
@@ -85,7 +96,14 @@ import { Icon } from  'original-ui'
 | `horizontalFlip` | `Boolean` | `false` | _Pass a boolean to determine whether the icon is flipped horizontally_ |
 | `spin` | `Boolean` | `false` | _Pass a boolean to determine whether the icon spins continuously_ |
 | `pulse` | `Boolean` | `false` | _Pass a boolean to determine whether the icon pulses continuously_ |
----
+
+## Credits & Dependencies
+
+[create-react-library](https://www.npmjs.com/package/create-react-library) *- React library bootstrap CLI*
+[React.js](https://reactjs.org/) *- JavaScript UI library*
+[Jest](https://jestjs.io/) *- JavaScript testing framework*
+[TravisCI](https://travis-ci.org/) *- Continuous integration*
+[Coveralls.io](https://coveralls.io/) *- Code coverage testing*
 
 ## License
 
