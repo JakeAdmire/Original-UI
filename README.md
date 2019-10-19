@@ -11,6 +11,15 @@
 
 </div>
 
+## Directory
+
+- [Install](#install)
+- [Components](#components)
+	- [TextInput](#textinput)
+	- [Icon](#icon)
+- [Credits & Dependencies](#credits-&-dependencies)
+- [License](#license)
+
 ## Install
 
 ```bash
