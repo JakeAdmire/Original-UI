@@ -1,5 +1,7 @@
 <h1 align="center">OriginalUI<h1/>
 
+<p align="center">A totally <strong>original</strong> component library built for <a href="https://reactjs.org">React.js</a></p>
+
 <div align="center">
 
   [![NPM](https://img.shields.io/npm/v/original-ui.svg)](https://www.npmjs.com/package/original-ui) 
