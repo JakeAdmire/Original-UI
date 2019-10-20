@@ -1,0 +1,31 @@
+.iconwrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /**/
+  border-radius: 50px;
+  position: relative;
+}
+
+.iconwrapper:hover::after {
+  background: #80808040;
+  cursor: pointer;
+}
+
+.iconbutton:active {
+  transition: opacity .3s ease;
+  opacity: 0.5;
+}
+
+.iconwrapper::after {
+  content: '';
+  transition: all .3s ease;
+  border-radius: 50px;
+  /**/
+  position: absolute;
+  top: 0; right: 0; left: 0; bottom: 0;
+}
+
+.icon {
+  box-sizing: border-box;
+}
