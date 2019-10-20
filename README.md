@@ -76,12 +76,23 @@ import { TextInput } from  'original-ui'
 ```javascript
 import { Icon } from  'original-ui'
 
-<Icon  name='skull' />
+<Icon
+  iconName='skull'
+  iconColor='white'
+  backgroundColor='red'/>
+<Icon
+  iconName='bath'
+  iconColor='white'
+  backgroundColor='cornflowerblue' />
+<Icon
+  iconName='bomb'
+  iconColor='white'
+  backgroundColor='black' />
 ```
 
 **Result:**
 
-<img width="101" alt="Screen Shot 2019-10-17 at 4 32 57 PM" src="https://user-images.githubusercontent.com/44077214/67052587-db681600-f0fb-11e9-916d-d6e7510c04ef.png">
+<img width="205" alt="Screen Shot 2019-10-20 at 5 47 46 PM" src="https://user-images.githubusercontent.com/44077214/67168473-22574500-f362-11e9-8c02-961901f03072.png">
 
 #### Parameters:
 
