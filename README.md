@@ -87,15 +87,17 @@ import { Icon } from  'original-ui'
 
 |Parameter| Data Type | Default Value | Description |
 |--|--|--|--|
-| `name` | `String` | `null` | Pass a string with the name of a Font Awesome icon to build the icon |
-| `style` | `String` | `'Solid'` | _Pass a string of 'Solid', 'Regular', 'Light', 'Duotone', or 'Brands' to determine the icon style. Only 'Solid' & 'Brands' are included by Font Awesome for free_ |
-| `size` | `String` | `'24px'` | _Pass a string to constrict the icon's size_ |
-| `color` | `String` | `'orangered'` | _Pass a string to set the icon's color_ |
-| `rotate` | `String` | `null` | _Pass a string of '90', '180', or '270' to rotate the icon to that degree_ |
-| `verticalFlip` | `Boolean` | `false` | _Pass a boolean to determine whether the icon is flipped vertically_ |
-| `horizontalFlip` | `Boolean` | `false` | _Pass a boolean to determine whether the icon is flipped horizontally_ |
-| `spin` | `Boolean` | `false` | _Pass a boolean to determine whether the icon spins continuously_ |
-| `pulse` | `Boolean` | `false` | _Pass a boolean to determine whether the icon pulses continuously_ |
+| `iconName` | `String` | `null` | Pass a string with the name of a Font Awesome icon to build the icon |
+| `iconType` | `String` | `'Solid'` | _Pass a string of 'Solid', 'Regular', 'Light', 'Duotone', or 'Brands' to determine the icon style. Only 'Solid' & 'Brands' are included by Font Awesome for free_ |
+| `iconSize` | `String` | `'24px'` | _Pass a string to constrict the icon's size_ |
+| `iconColor` | `String` | `'#00000033'` | _Pass a string to set the icon's color_ |
+| `rotation` | `String` | `null` | _Pass a string of '90', '180', or '270' to rotate the icon to that degree_ |
+| `isFlippedVertically` | `Boolean` | `false` | _Pass a boolean to determine whether the icon is flipped vertically_ |
+| `isFlippedHorizontally` | `Boolean` | `false` | _Pass a boolean to determine whether the icon is flipped horizontally_ |
+| `isSpinning` | `Boolean` | `false` | _Pass a boolean to determine whether the icon spins continuously_ |
+| `isPulsing` | `Boolean` | `false` | _Pass a boolean to determine whether the icon pulses continuously_ |
+| `onPress` | `Function` | `null` | _Pass a function to be called on icon press. Icon will not behave as a button if `onPress` is null_ |
+| backgroundColor | `String` | `null` | _Pass a string to set the icon's background color_ |
 
 ## Credits & Dependencies
 
