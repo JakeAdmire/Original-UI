@@ -36,35 +36,37 @@ npm install --save original-ui
 import { TextInput } from  'original-ui'
 
 <TextInput 
-  placeholder="ex. 'thoughtfulpassword123...'" 
+  placeholderText='ex. "thoughtfulpassword123..."'
   labelText='Enter your password:' 
-  rightIcon={<Icon name='eye-slash' />}
-/>
+  isPassInput={this.state.isTextHidden}
+  rightIcon={
+    <Icon 
+      iconName={this.state.isTextHidden ? 'eye' : 'eye-slash'}
+      iconSize='24px'
+      onPress={this.toggleHiddenText}/>
+  }/>
 ```
 
 **Result:**
 
-<img width="890" alt="Screen Shot 2019-10-17 at 8 19 12 PM" src="https://user-images.githubusercontent.com/44077214/67060801-7b816780-f11b-11e9-8af7-8ef8c5eccb12.png">
+<img width="838" alt="Screen Shot 2019-10-20 at 9 14 45 PM" src="https://user-images.githubusercontent.com/44077214/67174278-b931fa80-f37e-11e9-8e9c-fe374a3642cb.png">
 
 
 #### Parameters:
 
 |Parameter| Data Type | Default Value | Description |
 |--|--|--|--|
-| `placeholder` | `String` | `null` | _Pass a string to display as a placeholder_ |
+| `placeholderText` | `String` | `null` | _Pass a string to display as a placeholder_ |
 | labelText | `String` | `null` | _Pass a string to display as a label_ |
-| labelColor | `String` | `'orangered'` | _Pass a string to set the label's color_ |
-| passwordInput | `Boolean` | `false` | _Pass a boolean to determine whether you want the input's text obscured_ |
+| labelStyle | `Object` | `{ color: 'orange' }` | _Pass a style object to set the label's style rules_ |
+| isPassInput | `Boolean` | `false` | _Pass a boolean to determine whether you want the input's text obscured_ |
 | leftIcon | `Component` | `null` | _Pass an [Icon](#icon) or Button component to display on the left side of the input_ |
 | rightIcon | `Component` | `null` | _Pass an [Icon](#icon) or Button component to display on the right side of the input_ |
-| `vanishingPlaceholder` | `Boolean` | `true` | _Pass a boolean to determine whether you want the placeholder text to fade on focus_ |
 | `width` | `String` | `'100%'` | _Pass a string to constrict the component's width_ |
 | `height` | `String` | `'50px'` | _Pass a string to constrict the component's height_ |
-| `fontsize` | `String` | `'16px'` | _Pass a string to constrict the component's font size_ |
-| `showShadow` | `Boolean` | `true` | _Pass a boolean to determine whether you want the component to display a drop shadow_ |
-| `border` | `String` | `'orangered'` | _Pass a string to set the component's border color_ |
-| `radius` | `String` | `'10px'` | _Pass a string to set the component's border radius_ |
-| `changeMethod` | `Function` | `null` | _Pass a method that will receive the `event` object as a parameter_ |
+| `textStyle` | `Object` | `{ fontSize: '16px', color: 'grey' }` | _Pass a style object to set the input text's style rules_ |
+| `onChange` | `Function` | `null` | _Pass a method that will receive the `event` object as a parameter_ |
+| `value` | 'String' | `null` | _Pass a string to set the input's value_ |
 ---
 
 ### Icon
@@ -113,9 +115,13 @@ import { Icon } from  'original-ui'
 ## Credits & Dependencies
 
 [create-react-library](https://www.npmjs.com/package/create-react-library) *- React library bootstrap CLI*
+
 [React.js](https://reactjs.org/) *- JavaScript UI library*
+
 [Jest](https://jestjs.io/) *- JavaScript testing framework*
+
 [TravisCI](https://travis-ci.org/) *- Continuous integration*
+
 [Coveralls.io](https://coveralls.io/) *- Code coverage testing*
 
 ## License

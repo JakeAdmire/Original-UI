@@ -5,83 +5,53 @@ import styles from './styles.css'
 
 export class TextInput extends Component {
   static propTypes = {
-    placeholder: PropTypes.string,
+    placeholderText: PropTypes.string,
     labelText: PropTypes.string,
-    labelColor: PropTypes.string,
+    labelStyle: PropTypes.string,
     width: PropTypes.string,
     height: PropTypes.string,
-    fontsize: PropTypes.string,
-    showShadow: PropTypes.bool,
-    border: PropTypes.string,
-    radius: PropTypes.string,
-    vanishingPlaceholder: PropTypes.bool,
-    changeMethod: PropTypes.func,
-    passwordInput: PropTypes.bool,
+    textStyle: PropTypes.string,
+    onChange: PropTypes.func,
+    isPassInput: PropTypes.bool,
     leftIcon: PropTypes.object,
-    rightIcon: PropTypes.object
+    rightIcon: PropTypes.object,
+    value: PropTypes.string
   };
 
   constructor(props) {
     super(props)
-    this.state = {
-      inputValue: '',
-      isShadowShown: null
-    }
+    this.state = { isShadowShown: false }
   }
 
   updateShadow = () => {
-    this.setState({
-      isShadowShown: !this.state.isShadowShown
-    })
-  }
-
-  updateValue = (e) => {
-    this.setState({
-      inputValue: e.target.value
-    })
+    this.setState({ isShadowShown: !this.state.isShadowShown })
   }
 
   render() {
     const {
-      placeholder,
+      placeholderText = '',
       labelText,
-      labelColor = 'orangered',
+      labelStyle = { color: 'orange' },
       width = '100%',
       height = '50px',
-      fontsize = '16px',
-      showShadow = true,
-      border = 'orangered',
-      radius = '10px',
-      vanishingPlaceholder = true,
-      changeMethod = null,
-      passwordInput = false,
+      textStyle = {
+        fontSize: '16px',
+        color: 'grey'
+      },
+      onChange = null,
+      isPassInput = false,
       leftIcon,
-      rightIcon
+      rightIcon,
+      value
     } = this.props
-
-    let inputInlineStyles = {
-      fontSize: fontsize
-    }
 
     let divInlineStyles = {
       width: width,
-      height: height,
-      border: 'solid',
-      borderColor: border,
-      borderRadius: radius
+      height: height
     }
 
-    let labelInlineStyles = {
-      color: labelColor
-    }
-
-    let inputClass = `
-      ${styles.textinput} 
-      ${vanishingPlaceholder && styles.vanishingPlaceholder}
-    `
-
-    let divClass = `
-      ${styles.wrapperdiv}
+    let wrapperClass = `
+      ${styles.inputwrapper}
       ${this.state.isShadowShown && styles.inputshadow}
     `
 
@@ -92,29 +62,26 @@ export class TextInput extends Component {
             <label
               htmlFor={styles.textinput}
               className={styles.inputlabel}
-              style={labelInlineStyles}
-            >
+              style={labelStyle}>
               {labelText}
             </label>
         }
         <div
-          className={divClass}
-          style={divInlineStyles}
-        >
+          className={wrapperClass}
+          style={divInlineStyles}>
           {
             leftIcon && leftIcon.props && leftIcon
           }
           <input
-            type={passwordInput ? 'password' : 'text'}
-            value={this.state.inputValue}
+            type={isPassInput ? 'password' : 'text'}
+            value={value}
             id={styles.textinput}
-            className={inputClass}
-            placeholder={placeholder || null}
-            style={inputInlineStyles}
-            onChange={(e) => this.updateValue(e) && (changeMethod !== null ? (e) => changeMethod(e) : null)}
-            onFocus={showShadow ? this.updateShadow : null}
-            onBlur={showShadow ? this.updateShadow : null}
-          />
+            className={styles.textinput}
+            placeholder={placeholderText}
+            style={textStyle}
+            onChange={(e) => onChange !== null ? (e) => onChange(e) : null}
+            onFocus={this.updateShadow}
+            onBlur={this.updateShadow}/>
           {
             rightIcon && rightIcon.props && rightIcon
           }
