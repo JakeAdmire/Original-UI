@@ -51,20 +51,17 @@ import { TextInput } from  'original-ui'
 
 |Parameter| Data Type | Default Value | Description |
 |--|--|--|--|
-| `placeholder` | `String` | `null` | _Pass a string to display as a placeholder_ |
+| `placeholderText` | `String` | `null` | _Pass a string to display as a placeholder_ |
 | labelText | `String` | `null` | _Pass a string to display as a label_ |
-| labelColor | `String` | `'orangered'` | _Pass a string to set the label's color_ |
-| passwordInput | `Boolean` | `false` | _Pass a boolean to determine whether you want the input's text obscured_ |
+| labelStyle | `Object` | `{ color: 'orange' }` | _Pass a style object to set the label's style rules_ |
+| isPassInput | `Boolean` | `false` | _Pass a boolean to determine whether you want the input's text obscured_ |
 | leftIcon | `Component` | `null` | _Pass an [Icon](#icon) or Button component to display on the left side of the input_ |
 | rightIcon | `Component` | `null` | _Pass an [Icon](#icon) or Button component to display on the right side of the input_ |
-| `vanishingPlaceholder` | `Boolean` | `true` | _Pass a boolean to determine whether you want the placeholder text to fade on focus_ |
 | `width` | `String` | `'100%'` | _Pass a string to constrict the component's width_ |
 | `height` | `String` | `'50px'` | _Pass a string to constrict the component's height_ |
-| `fontsize` | `String` | `'16px'` | _Pass a string to constrict the component's font size_ |
-| `showShadow` | `Boolean` | `true` | _Pass a boolean to determine whether you want the component to display a drop shadow_ |
-| `border` | `String` | `'orangered'` | _Pass a string to set the component's border color_ |
-| `radius` | `String` | `'10px'` | _Pass a string to set the component's border radius_ |
-| `changeMethod` | `Function` | `null` | _Pass a method that will receive the `event` object as a parameter_ |
+| `textStyle` | `Object` | `{ fontSize: '16px', color: 'grey' }` | _Pass a style object to set the input text's style rules_ |
+| `onChange` | `Function` | `null` | _Pass a method that will receive the `event` object as a parameter_ |
+| `value` | 'String' | `null` | _Pass a string to set the input's value_ |
 ---
 
 ### Icon
