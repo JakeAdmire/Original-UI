@@ -3,7 +3,7 @@ node_js:
   - 9
   - 8
 script:
-  - npm ci
+  - sudo npm i -g npm@latest && npm ci
   - npm install --global rollup
   - npm test -- --collectCoverage=true
   - npm run coveralls
