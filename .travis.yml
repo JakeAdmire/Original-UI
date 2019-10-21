@@ -6,6 +6,7 @@ cache:
   directories:
     - node_modules
 script:
+  - npm ci
   - npm test -- --collectCoverage=true
   - npm run build
   - npm run coveralls
