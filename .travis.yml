@@ -13,8 +13,7 @@ jobs:
     - stage: "Test & Coverage"
       script: npm test -- --collectCoverage=true && npm run coveralls
     - stage: "Deploy"
-      script: npm install --global rollup
-      script: npm i rollup-plugin-babel
+      script: npm install --global rollup && npm i rollup-plugin-babel
       deploy:
         provider: npm
         email: NPM_EMAIL
