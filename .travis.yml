@@ -7,18 +7,18 @@ cache:
 jobs:
   include:
     - stage: "Install"
-        script: npm ci
+      script: npm ci
     - stage: "Test & Coverage"
-        script: npm test -- --collectCoverage=true
-        script: npm run coveralls
+      script: npm test -- --collectCoverage=true
+      script: npm run coveralls
     - stage: "Deploy"
-        script: npm install --global rollup
-        script: npm i rollup-plugin-babel
-        deploy:
-          provider: npm
-          email: NPM_EMAIL
-          api_key: NPM_TOKEN
-          on:
-            all_branches: true
+      script: npm install --global rollup
+      script: npm i rollup-plugin-babel
+      deploy:
+        provider: npm
+        email: NPM_EMAIL
+        api_key: NPM_TOKEN
+        on:
+          all_branches: true
 addons:	
   artifacts: true
