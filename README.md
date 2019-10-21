@@ -1,15 +1,20 @@
-<h1 align="center">OriginalUI<h1/>
-
-<p align="center">A totally <strong>original</strong> component library built for <a href="https://reactjs.org">React.js</a></p>
+<h1 align="center">Original-UI</h1>
 
 <div align="center">
 
-  [![NPM](https://img.shields.io/npm/v/original-ui.svg)](https://www.npmjs.com/package/original-ui) 
-  [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
-  [![Build Status](https://travis-ci.org/JakeAdmire/original-ui.svg?branch=master)](https://travis-ci.org/JakeAdmire/original-ui)
-  [![Coverage Status](https://coveralls.io/repos/github/JakeAdmire/original-ui/badge.svg?branch=ci-testing-deployment-setup)](https://coveralls.io/github/JakeAdmire/original-ui?branch=ci-testing-deployment-setup)
+A totally **original** component library built for [React.js](http://reactjs.org/).
 
+[![NPM](https://img.shields.io/npm/v/original-ui.svg)](https://www.npmjs.com/package/original-ui)
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![Build Status](https://travis-ci.org/JakeAdmire/original-ui.svg?branch=master)](https://travis-ci.org/JakeAdmire/original-ui)
+[![Coverage Status](https://coveralls.io/repos/github/JakeAdmire/original-ui/badge.svg?branch=ci-testing-deployment-setup)](https://coveralls.io/github/JakeAdmire/original-ui?branch=ci-testing-deployment-setup)
 </div>
+
+## Why?
+Why did I build **Original-UI?** Several reasons really: 
+- I thought it'd be fun (and it is!)
+- I wanted to stay sharp with React & JavaScript while searching for a Front End Engineering role ([hire me!](https://www.linkedin.com/in/jakeadmire/))
+- I thoroughly enjoy UI & UX design and this seemed like a great opportunity to practice it
 
 ## Directory
 
