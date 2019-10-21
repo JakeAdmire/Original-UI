@@ -36,15 +36,20 @@ npm install --save original-ui
 import { TextInput } from  'original-ui'
 
 <TextInput 
-  placeholder="ex. 'thoughtfulpassword123...'" 
+  placeholderText='ex. "thoughtfulpassword123..."'
   labelText='Enter your password:' 
-  rightIcon={<Icon name='eye-slash' />}
-/>
+  isPassInput={this.state.isTextHidden}
+  rightIcon={
+    <Icon 
+      iconName={this.state.isTextHidden ? 'eye' : 'eye-slash'}
+      iconSize='24px'
+      onPress={this.toggleHiddenText}/>
+  }/>
 ```
 
 **Result:**
 
-<img width="890" alt="Screen Shot 2019-10-17 at 8 19 12 PM" src="https://user-images.githubusercontent.com/44077214/67060801-7b816780-f11b-11e9-8af7-8ef8c5eccb12.png">
+<img width="838" alt="Screen Shot 2019-10-20 at 9 14 45 PM" src="https://user-images.githubusercontent.com/44077214/67174278-b931fa80-f37e-11e9-8e9c-fe374a3642cb.png">
 
 
 #### Parameters:
