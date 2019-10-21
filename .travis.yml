@@ -8,15 +8,12 @@ cache:
 script:
   - npm install
   - npm test -- --collectCoverage=true
-  - npm run build
   - npm run coveralls
-  - npm login
-  - npm publish
 addons:
   artifacts: true
-# deploy:
-#   provider: npm
-#   email: NPM_EMAIL
-#   api_key: NPM_TOKEN
-#   on:
-#     all_branches: true
+deploy:
+  provider: npm
+  email: NPM_EMAIL
+  api_key: NPM_TOKEN
+  on:
+    all_branches: true
