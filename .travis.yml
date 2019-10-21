@@ -11,8 +11,7 @@ jobs:
     - stage: "Install"
       script: npm ci
     - stage: "Test & Coverage"
-      script: npm test -- --collectCoverage=true
-      script: npm run coveralls
+      script: npm test -- --collectCoverage=true && npm run coveralls
     - stage: "Deploy"
       script: npm install --global rollup
       script: npm i rollup-plugin-babel
