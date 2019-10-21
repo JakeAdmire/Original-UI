@@ -4,6 +4,8 @@ node_js:
 cache:	
   directories:	
     - node_modules
+addons:	
+  artifacts: true
 jobs:
   include:
     - stage: "Install"
@@ -20,5 +22,3 @@ jobs:
         api_key: NPM_TOKEN
         on:
           all_branches: true
-addons:	
-  artifacts: true
