@@ -12,11 +12,3 @@ jobs:
       script: npm ci
     - stage: "Test & Coverage"
       script: npm test -- --collectCoverage=true && npm run coveralls
-    - stage: "Deploy"
-      script: npm install --global rollup && npm install --save-dev rollup-plugin-babel@latest
-      deploy:
-        provider: npm
-        email: NPM_EMAIL
-        api_key: NPM_TOKEN
-        on:
-          all_branches: true
