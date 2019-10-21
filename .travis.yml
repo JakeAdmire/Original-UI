@@ -6,8 +6,8 @@ cache:
   directories:
     - node_modules
 script:
+  - npm install
   - npm test -- --collectCoverage=true
-  - npm run build
   - npm run coveralls
 addons:
   artifacts: true
@@ -16,4 +16,4 @@ deploy:
   email: NPM_EMAIL
   api_key: NPM_TOKEN
   on:
-    branch: master
+    all_branches: true
