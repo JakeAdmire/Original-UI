@@ -6,10 +6,11 @@ cache:
   directories:
     - node_modules
 script:
-  - npm ci
+  - npm install
   - npm test -- --collectCoverage=true
   - npm run build
   - npm run coveralls
+  - npm login
   - npm publish
 addons:
   artifacts: true
