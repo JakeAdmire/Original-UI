@@ -4,16 +4,21 @@ node_js:
 cache:	
   directories:	
     - node_modules
-script:
-  - npm ci
-  - npm install --global rollup
-  - npm test -- --collectCoverage=true
-  - npm run coveralls
+jobs:
+  include:
+    - stage: "Install"
+        script: npm ci
+    - stage: "Test & Coverage"
+        script: npm test -- --collectCoverage=true
+        script: npm run coveralls
+    - stage: "Deploy"
+        script: npm install --global rollup
+        script: npm i rollup-plugin-babel
+        deploy:
+          provider: npm
+          email: NPM_EMAIL
+          api_key: NPM_TOKEN
+          on:
+            all_branches: true
 addons:	
   artifacts: true
-deploy:
-  provider: npm
-  email: NPM_EMAIL
-  api_key: NPM_TOKEN
-  on:
-    all_branches: true
