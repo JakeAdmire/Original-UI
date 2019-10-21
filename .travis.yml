@@ -1,15 +1,24 @@
 language: node_js
 node_js:
-  - 9
   - 8
-script:
-  - npm ci
-  - npm install --global rollup
-  - npm test -- --collectCoverage=true
-  - npm run coveralls
-deploy:
-  provider: npm
-  email: NPM_EMAIL
-  api_key: NPM_TOKEN
-  on:
-    all_branches: true
+cache:	
+  directories:	
+    - node_modules
+jobs:
+  include:
+    - stage: "Install"
+        script: npm ci
+    - stage: "Test & Coverage"
+        script: npm test -- --collectCoverage=true
+        script: npm run coveralls
+    - stage: "Deploy"
+        script: npm install --global rollup
+        script: npm i rollup-plugin-babel
+        deploy:
+          provider: npm
+          email: NPM_EMAIL
+          api_key: NPM_TOKEN
+          on:
+            all_branches: true
+addons:	
+  artifacts: true

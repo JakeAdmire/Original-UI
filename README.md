@@ -51,7 +51,6 @@ npm install --save original-ui
 
 [Click here for more examples & complete TextInput documentation](https://github.com/JakeAdmire/Original-UI/tree/master/src/components/TextInput)
 
-
 ## Credits & Dependencies
 
 [create-react-library](https://www.npmjs.com/package/create-react-library) *- React library bootstrap CLI*
