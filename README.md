@@ -10,6 +10,12 @@ A totally **original** component library built for [React.js](http://reactjs.org
 [![Coverage Status](https://coveralls.io/repos/github/JakeAdmire/original-ui/badge.svg?branch=ci-testing-deployment-setup)](https://coveralls.io/github/JakeAdmire/original-ui?branch=ci-testing-deployment-setup)
 </div>
 
+## Why?
+Why did I build **Original-UI?** Several reasons really: 
+- I thought it'd be fun (and it is!)
+- I wanted to stay sharp with React & JavaScript while searching for a Front End Engineering role ([hire me!](https://www.linkedin.com/in/jakeadmire/))
+- I thoroughly enjoy UI & UX design and this seemed like a great opportunity to practice it
+
 ## Directory
 
 - [Install](#install)
@@ -59,8 +65,8 @@ import { TextInput } from  'original-ui'
 | labelText | `String` | `null` | _Pass a string to display as a label_ |
 | labelStyle | `Object` | `{ color: 'orange' }` | _Pass a style object to set the label's style rules_ |
 | isPassInput | `Boolean` | `false` | _Pass a boolean to determine whether you want the input's text obscured_ |
-| leftIcon | `Component` | `null` | _Pass an [Icon](#icon) or Button component to display on the left side of the input_ |
-| rightIcon | `Component` | `null` | _Pass an [Icon](#icon) or Button component to display on the right side of the input_ |
+| leftIcon | `Component` | `null` | _Pass an [Icon](#icon) component to display on the left side of the input_ |
+| rightIcon | `Component` | `null` | _Pass an [Icon](#icon) component to display on the right side of the input_ |
 | `width` | `String` | `'100%'` | _Pass a string to constrict the component's width_ |
 | `height` | `String` | `'50px'` | _Pass a string to constrict the component's height_ |
 | `textStyle` | `Object` | `{ fontSize: '16px', color: 'grey' }` | _Pass a style object to set the input text's style rules_ |
@@ -70,7 +76,7 @@ import { TextInput } from  'original-ui'
 
 ### Icon
 
-**OriginalUI** utilizes [Font Awesome](fontawesome.com) to build it's icons. To take advantage of this component you must first follow the instructions at [fontawesome.com](fontawesome.com) and implement the `<script>` tag within the enclosing `<head>` tags of your `index.html` file.
+**Original-UI** utilizes [Font Awesome](fontawesome.com) to build it's icons. To take advantage of this component you must first follow the instructions at [fontawesome.com](fontawesome.com) and implement the `<script>` tag within the enclosing `<head>` tags of your `index.html` file.
 
 #### Example Usage:
 
