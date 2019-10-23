@@ -1,10 +1,19 @@
 /* eslint-disable padded-blocks */
+import React from 'react'
+import { shallow } from 'enzyme'
+
 import { TextInput } from '../components/TextInput/TextInput'
 
 describe('TextInput', () => {
+  let wrapper
 
-  it('is truthy', () => {
-    expect(TextInput).toBeTruthy()
+  beforeEach(() => {
+    wrapper = shallow(
+      <TextInput />
+    )
   })
 
+  it('should match the snapshot', () => {
+    expect(wrapper).toMatchSnapshot()
+  })
 })
