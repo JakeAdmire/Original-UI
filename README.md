@@ -16,40 +16,9 @@ Why did I build **Original-UI?** Several reasons really:
 - I wanted to stay sharp with React & JavaScript while searching for a Front End Engineering role ([hire me!](https://www.linkedin.com/in/jakeadmire/))
 - I thoroughly enjoy UI & UX design and this seemed like a great opportunity to practice it
 
-## Directory
+## Want to learn more?
 
-- [Install](#install)
-- [Components](#components)
-	- [TextInput](#textinput)
-	- [Icon](#icon)
-- [Credits & Dependencies](#credits-&-dependencies)
-- [License](#license)
-
-## Install
-
-```bash
-npm install --save original-ui
-```
-
-## Components
-
-### Icon
-
-#### Example:
-
-<img  width="205"  alt="Screen Shot 2019-10-20 at 5 47 46 PM"  src="https://user-images.githubusercontent.com/44077214/67168473-22574500-f362-11e9-8c02-961901f03072.png">
-
-[Click here for more examples & complete Icon documentation](https://github.com/JakeAdmire/Original-UI/tree/master/src/components/Icon)
-
----
-
-### TextInput
-
-#### Example:
-
-<img  width="838"  alt="Screen Shot 2019-10-20 at 9 14 45 PM"  src="https://user-images.githubusercontent.com/44077214/67174278-b931fa80-f37e-11e9-8e9c-fe374a3642cb.png">
-
-[Click here for more examples & complete TextInput documentation](https://github.com/JakeAdmire/Original-UI/tree/master/src/components/TextInput)
+[Check out the Wiki](https://github.com/JakeAdmire/Original-UI/wiki#what-is-original-ui)! It's an amazing compilation of all the information available to you about everything **Original-UI**.
 
 ## Credits & Dependencies
 
