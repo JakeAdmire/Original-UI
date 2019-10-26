@@ -192,18 +192,27 @@ describe('TextInput', () => {
 
   })
 
-  describe.skip('[Parameter] onChange', () => {
+  describe('[Parameter] onChange', () => {
 
     afterEach(() => {
       wrapper.setProps({ onChange: null })
     })
 
     it('should not have a default value', () => {
+      let input = wrapper.find('input')
 
+      expect(input.props().onChange).toEqual(null)
     })
 
     it('should be called on TextInput change', () => {
+      let onChange = jest.fn()
 
+      wrapper.setProps({ onChange })
+
+      let input = wrapper.find('input')
+      input.simulate('change')
+
+      expect(onChange).toBeCalled()
     })
 
     it.skip('should throw an error if parameter is not type:Function', () => {
