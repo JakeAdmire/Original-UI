@@ -33,8 +33,8 @@ export function TextInput({
   }
 
   const wrapperClass = () => {
-    let className = ''
-    className += styles.inputwrapper
+    let className = 'inputWrapper'
+    className += ' ' + styles.inputwrapper
     if (isShadowShown) className += ' ' + styles.inputshadow
     return className
   }
@@ -64,7 +64,7 @@ export function TextInput({
           className={styles.textinput}
           placeholder={placeholderText}
           style={textStyle}
-          onChange={(e) => onChange !== null ? onChange(e) : null}
+          onChange={onChange !== null ? (e) => onChange(e) : null}
           onFocus={() => updateShadow(!isShadowShown)}
           onBlur={() => updateShadow(!isShadowShown)}
         />
