@@ -21,10 +21,7 @@ ShallowWrapper {
       "children": Array [
         undefined,
         <div
-          className="
-      undefined
-      false
-    "
+          className="inputWrapper undefined"
           style={
                     Object {
                               "height": "50px",
@@ -36,7 +33,7 @@ ShallowWrapper {
                     className={undefined}
                     id={undefined}
                     onBlur={[Function]}
-                    onChange={[Function]}
+                    onChange={null}
                     onFocus={[Function]}
                     placeholder=""
                     style={
@@ -65,7 +62,7 @@ ShallowWrapper {
               className={undefined}
               id={undefined}
               onBlur={[Function]}
-              onChange={[Function]}
+              onChange={null}
               onFocus={[Function]}
               placeholder=""
               style={
@@ -79,10 +76,7 @@ ShallowWrapper {
 />,
             undefined,
           ],
-          "className": "
-      undefined
-      false
-    ",
+          "className": "inputWrapper undefined",
           "style": Object {
             "height": "50px",
             "width": "100%",
@@ -99,7 +93,7 @@ ShallowWrapper {
               "className": undefined,
               "id": undefined,
               "onBlur": [Function],
-              "onChange": [Function],
+              "onChange": null,
               "onFocus": [Function],
               "placeholder": "",
               "style": Object {
@@ -129,10 +123,7 @@ ShallowWrapper {
         "children": Array [
           undefined,
           <div
-            className="
-      undefined
-      false
-    "
+            className="inputWrapper undefined"
             style={
                         Object {
                                     "height": "50px",
@@ -144,7 +135,7 @@ ShallowWrapper {
                         className={undefined}
                         id={undefined}
                         onBlur={[Function]}
-                        onChange={[Function]}
+                        onChange={null}
                         onFocus={[Function]}
                         placeholder=""
                         style={
@@ -173,7 +164,7 @@ ShallowWrapper {
                 className={undefined}
                 id={undefined}
                 onBlur={[Function]}
-                onChange={[Function]}
+                onChange={null}
                 onFocus={[Function]}
                 placeholder=""
                 style={
@@ -187,10 +178,7 @@ ShallowWrapper {
 />,
               undefined,
             ],
-            "className": "
-      undefined
-      false
-    ",
+            "className": "inputWrapper undefined",
             "style": Object {
               "height": "50px",
               "width": "100%",
@@ -207,7 +195,7 @@ ShallowWrapper {
                 "className": undefined,
                 "id": undefined,
                 "onBlur": [Function],
-                "onChange": [Function],
+                "onChange": null,
                 "onFocus": [Function],
                 "placeholder": "",
                 "style": Object {
@@ -255,6 +243,5 @@ ShallowWrapper {
     Symbol(enzyme.__providerValues__): undefined,
   },
   Symbol(enzyme.__providerValues__): Map {},
-  Symbol(enzyme.__childContext__): null,
 }
 `;
