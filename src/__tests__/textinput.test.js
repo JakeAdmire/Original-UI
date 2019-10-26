@@ -3,6 +3,7 @@ import React from 'react'
 import { shallow } from 'enzyme'
 
 import { TextInput } from '../components/TextInput/TextInput'
+import { Icon } from '../components/Icon/Icon'
 
 describe('TextInput', () => {
   let wrapper
@@ -248,18 +249,25 @@ describe('TextInput', () => {
 
   })
 
-  describe.skip('[Parameter] leftIcon', () => {
+  describe('[Parameter] leftIcon', () => {
 
     afterEach(() => {
       wrapper.setProps({ leftIcon: undefined })
     })
 
     it('should not have a default value', () => {
+      let inputWrapper = wrapper.find('.inputWrapper')
 
+      expect(inputWrapper.props().children[0]).toEqual(undefined)
     })
 
     it('should give TextInput element reflecting parameter', () => {
+      let leftIcon = <Icon iconName='search' />
 
+      wrapper.setProps({ leftIcon })
+
+      let inputWrapper = wrapper.find('.inputWrapper')
+      expect(inputWrapper.props().children[0]).toEqual(leftIcon)
     })
 
     it.skip('should throw an erorr if parameter is not type:??Element??', () => {
