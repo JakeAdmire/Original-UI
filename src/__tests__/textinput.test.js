@@ -69,21 +69,37 @@ describe('TextInput', () => {
 
   })
 
-  describe.skip('[Parameter] labelStyle', () => {
+  describe('[Parameter] labelStyle', () => {
 
     afterEach(() => {
-      wrapper.setProps({ labelStyle: { color: 'orange' } })
+      wrapper.setProps({ labelStyle: `{ color: 'orange' }` })
     })
 
     it('should have a default value', () => {
+      let labelStyle = { color: 'orange' }
+
+      wrapper.setProps({ labelText: 'Enter your email' })
+
+      let label = wrapper.find('label')
+      expect(label.props().style).toEqual(labelStyle)
 
     })
 
     it('should give TextInput label style reflecting parameter', () => {
+      let labelStyle = `{ fontSize: '34px', color: 'blue' }`
 
+      wrapper.setProps({ 
+        labelText: 'Email:',
+        labelStyle
+      })
+
+      let label = wrapper.find('label')
+      expect(label.props().style).toEqual(labelStyle)
     })
 
-    it.skip('should throw an error if parameter is not type:String')
+    it.skip('should throw an error if parameter is not type:String', () => {
+
+    })
 
   })
 
