@@ -276,18 +276,25 @@ describe('TextInput', () => {
 
   })
 
-  describe.skip('[Parameter] rightIcon', () => {
+  describe('[Parameter] rightIcon', () => {
 
     afterEach(() => {
       wrapper.setProps({ rightIcon: undefined })
     })
 
     it('should not have a default value', () => {
+      let inputWrapper = wrapper.find('.inputWrapper')
 
+      expect(inputWrapper.props().children[2]).toEqual(undefined)
     })
 
     it('should give TextInput element reflecting parameter', () => {
+      let rightIcon = <Icon iconName='search' />
 
+      wrapper.setProps({ rightIcon })
+
+      let inputWrapper = wrapper.find('.inputWrapper')
+      expect(inputWrapper.props().children[2]).toEqual(rightIcon)
     })
 
     it('should throw an error if parameter is not type:??Element??', () => {
@@ -296,21 +303,28 @@ describe('TextInput', () => {
 
   })
 
-  describe.skip('[Parameter] value', () => {
+  describe('[Parameter] value', () => {
 
     afterEach(() => {
       wrapper.setProps({ value: undefined })
     })
 
     it('should not have a default value', () => {
+      let input = wrapper.find('input')
 
+      expect(input.props().value).toEqual(undefined)
     })
 
     it('should give TextInput input value reflecting parameter', () => {
+      let value = 'applesauce'
 
+      wrapper.setProps({ value })
+
+      let input = wrapper.find('input')
+      expect(input.props().value).toEqual(value)
     })
 
-    it('should throw an error if parameter is not type:String', () => {
+    it.skip('should throw an error if parameter is not type:String', () => {
 
     })
 
