@@ -24,11 +24,17 @@ describe('TextInput', () => {
     })
 
     it('should have a default value', () => {
-      
+      let input = wrapper.find('input')
+      expect(input.props().placeholder).toEqual('')
     })
 
     it('should give TextInput placeholder reflecting parameter', () => {
+      expect(wrapper.find('input').props().placeholder).toEqual('')
 
+      let placeholderText = 'Start typing to search...'
+      wrapper.setProps({ placeholderText: placeholderText })
+
+      expect(wrapper.find('input').props().placeholder).toEqual(placeholderText)
     })
 
     it.skip('should throw an error if parameter is not type:String', () => {
@@ -37,21 +43,27 @@ describe('TextInput', () => {
 
   })
 
-  describe.skip('[Parameter] labelText', () => {
+  describe('[Parameter] labelText', () => {
 
     afterEach(() => {
       wrapper.setProps({ labelText: undefined })
     })
 
     it('should not have a default value', () => {
-
+      let label = wrapper.props().children[0]
+      expect(label).toEqual(undefined)
     })
 
     it('should give TextInput a label reflecting parameter', () => {
+      let labelText = 'Enter your email:'
 
+      wrapper.setProps({ labelText })
+
+      let labelInnerText = wrapper.find('label').props().children
+      expect(labelInnerText).toEqual(labelText)
     })
 
-    it.skip('should throw an error if parameter is not  type:String', () => {
+    it.skip('should throw an error if parameter is not type:String', () => {
 
     })
 
@@ -170,7 +182,7 @@ describe('TextInput', () => {
 
     })
 
-    it.skip('should throw an error if parameter is not type:Boolean', () => P{
+    it.skip('should throw an error if parameter is not type:Boolean', () => {
 
     })
 
