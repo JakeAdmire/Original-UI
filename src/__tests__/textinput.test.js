@@ -103,18 +103,26 @@ describe('TextInput', () => {
 
   })
 
-  describe.skip('[Parameter] width', () => {
+  describe('[Parameter] width', () => {
 
     afterEach(() => {
       wrapper.setProps({ width: '100%' })
     })
 
     it('should have a default value', () => {
+      let width = '100%'
 
+      let inputWrapper = wrapper.find('.inputWrapper')
+      expect(inputWrapper.props().style.width).toEqual(width)
     })
 
     it('should give TextInput style reflecting parameter', () => {
+      let width = '50px'
 
+      wrapper.setProps({ width })
+
+      let inputWrapper = wrapper.find('.inputWrapper')
+      expect(inputWrapper.props().style.width).toEqual(width)
     })
 
     it.skip('should throw an error if parameter is not type:String', () => {
