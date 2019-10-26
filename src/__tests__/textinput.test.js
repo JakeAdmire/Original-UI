@@ -138,11 +138,19 @@ describe('TextInput', () => {
     })
 
     it('should have a default value', () => {
+      let height = '50px'
 
+      let inputWrapper = wrapper.find('.inputWrapper')
+      expect(inputWrapper.props().style.height).toEqual(height)
     })
 
     it('should give TextInput style reflecting parameter', () => {
+      let height = '100%'
 
+      wrapper.setProps({ height })
+
+      let inputWrapper = wrapper.find('.inputWrapper')
+      expect(inputWrapper.props().style.height).toEqual(height)
     })
 
     it.skip('should throw an error if parameter is not type:String', () => {
@@ -151,21 +159,33 @@ describe('TextInput', () => {
 
   })
 
-  describe.skip('[Parameter] textStyle', () => {
+  describe('[Parameter] textStyle', () => {
 
     afterEach(() => {
-      wrapper.setProps({ textStyle: {
+      wrapper.setProps({ textStyle: `{
         fontSize: '16px',
         color: 'grey'
-      } })
+      }` })
     })
 
     it('should have a default value', () => {
-
+      let textStyle = {
+        fontSize: '16px',
+        color: 'grey'
+      }
+      let input = wrapper.find('input')
+      expect(input.props().style).toEqual(textStyle)
     })
 
     it('should give TextInput style reflecting parameter', () => {
+      let textStyle = `{
+        fontWeight: 800
+      }`
 
+      wrapper.setProps({ textStyle })
+
+      let input = wrapper.find('input')
+      expect(input.props().style).toEqual(textStyle)
     })
 
     it.skip('should throw an error if parameter is not type:Object')
