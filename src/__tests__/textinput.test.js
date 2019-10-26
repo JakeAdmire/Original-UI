@@ -221,18 +221,25 @@ describe('TextInput', () => {
 
   })
 
-  describe.skip('[Parameter] isPassInput', () => {
+  describe('[Parameter] isPassInput', () => {
 
     afterEach(() => {
       wrapper.setProps({ isPassInput: false })
     })
 
     it('should have a default value', () => {
+      let input = wrapper.find('input')
 
+      expect(input.props().type).toEqual('text')
     })
 
     it('should give TextInput input type reflecting parameter', () => {
+      let isPassInput = true
 
+      wrapper.setProps({ isPassInput })
+
+      let input = wrapper.find('input')
+      expect(input.props().type).toEqual('password')
     })
 
     it.skip('should throw an error if parameter is not type:Boolean', () => {
