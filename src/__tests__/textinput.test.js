@@ -44,66 +44,6 @@ describe('TextInput', () => {
 
   })
 
-  describe('[Parameter] labelText', () => {
-
-    afterEach(() => {
-      wrapper.setProps({ labelText: undefined })
-    })
-
-    it('should not have a default value', () => {
-      let label = wrapper.props().children[0]
-      expect(label).toEqual(undefined)
-    })
-
-    it('should give TextInput a label reflecting parameter', () => {
-      let labelText = 'Enter your email:'
-
-      wrapper.setProps({ labelText })
-
-      let labelInnerText = wrapper.find('label').props().children
-      expect(labelInnerText).toEqual(labelText)
-    })
-
-    it.skip('should throw an error if parameter is not type:String', () => {
-
-    })
-
-  })
-
-  describe('[Parameter] labelStyle', () => {
-
-    afterEach(() => {
-      wrapper.setProps({ labelStyle: `{ color: 'orange' }` })
-    })
-
-    it('should have a default value', () => {
-      let labelStyle = { color: 'orange' }
-
-      wrapper.setProps({ labelText: 'Enter your email' })
-
-      let label = wrapper.find('label')
-      expect(label.props().style).toEqual(labelStyle)
-
-    })
-
-    it('should give TextInput label style reflecting parameter', () => {
-      let labelStyle = `{ fontSize: '34px', color: 'blue' }`
-
-      wrapper.setProps({ 
-        labelText: 'Email:',
-        labelStyle
-      })
-
-      let label = wrapper.find('label')
-      expect(label.props().style).toEqual(labelStyle)
-    })
-
-    it.skip('should throw an error if parameter is not type:String', () => {
-
-    })
-
-  })
-
   describe('[Parameter] width', () => {
 
     afterEach(() => {
