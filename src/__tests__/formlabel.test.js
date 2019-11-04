@@ -26,7 +26,12 @@ describe('FormLabel', () => {
     })
 
     it('should give FormLabel child element reflecting parameter', () => {
+      expect(wrapper.find('label').props().children[1]).toEqual(null)
 
+      let input = <TextInput />
+      wrapper.setProps({ context: input })
+
+      expect(wrapper.find('label').props().children[1]).toEqual(input)
     })
 
   })
