@@ -69,7 +69,8 @@ describe('FormLabel', () => {
   describe('[Parameter] labelStyle', () => {
 
     it('should have a default value', () => {
-
+      let label = wrapper.find('label')
+      expect(label.props().style.color).toEqual('orange')
     })
 
     it('should give FormLabel style reflecting parameter', () => {
