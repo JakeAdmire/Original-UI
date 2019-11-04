@@ -20,33 +20,29 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         undefined,
-        <div
-          className="inputWrapper undefined"
+        <input
+          className={undefined}
+          id={undefined}
+          onBlur={[Function]}
+          onChange={null}
+          onFocus={[Function]}
+          placeholder=""
           style={
                     Object {
-                              "height": "50px",
-                              "width": "100%",
+                              "color": "grey",
+                              "fontSize": "16px",
                             }
           }
->
-          <input
-                    className={undefined}
-                    id={undefined}
-                    onBlur={[Function]}
-                    onChange={null}
-                    onFocus={[Function]}
-                    placeholder=""
-                    style={
-                              Object {
-                                        "color": "grey",
-                                        "fontSize": "16px",
-                                      }
-                    }
-                    type="text"
-                    value={undefined}
-          />
-</div>,
+          type="text"
+          value={undefined}
+/>,
+        undefined,
       ],
+      "className": "inputWrapper undefined",
+      "style": Object {
+        "height": "50px",
+        "width": "100%",
+      },
     },
     "ref": null,
     "rendered": Array [
@@ -56,61 +52,24 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": Array [
-            undefined,
-            <input
-              className={undefined}
-              id={undefined}
-              onBlur={[Function]}
-              onChange={null}
-              onFocus={[Function]}
-              placeholder=""
-              style={
-                            Object {
-                                          "color": "grey",
-                                          "fontSize": "16px",
-                                        }
-              }
-              type="text"
-              value={undefined}
-/>,
-            undefined,
-          ],
-          "className": "inputWrapper undefined",
+          "className": undefined,
+          "id": undefined,
+          "onBlur": [Function],
+          "onChange": null,
+          "onFocus": [Function],
+          "placeholder": "",
           "style": Object {
-            "height": "50px",
-            "width": "100%",
+            "color": "grey",
+            "fontSize": "16px",
           },
+          "type": "text",
+          "value": undefined,
         },
         "ref": null,
-        "rendered": Array [
-          undefined,
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "className": undefined,
-              "id": undefined,
-              "onBlur": [Function],
-              "onChange": null,
-              "onFocus": [Function],
-              "placeholder": "",
-              "style": Object {
-                "color": "grey",
-                "fontSize": "16px",
-              },
-              "type": "text",
-              "value": undefined,
-            },
-            "ref": null,
-            "rendered": null,
-            "type": "input",
-          },
-          undefined,
-        ],
-        "type": "div",
+        "rendered": null,
+        "type": "input",
       },
+      undefined,
     ],
     "type": "div",
   },
@@ -122,33 +81,29 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           undefined,
-          <div
-            className="inputWrapper undefined"
+          <input
+            className={undefined}
+            id={undefined}
+            onBlur={[Function]}
+            onChange={null}
+            onFocus={[Function]}
+            placeholder=""
             style={
                         Object {
-                                    "height": "50px",
-                                    "width": "100%",
+                                    "color": "grey",
+                                    "fontSize": "16px",
                                   }
             }
->
-            <input
-                        className={undefined}
-                        id={undefined}
-                        onBlur={[Function]}
-                        onChange={null}
-                        onFocus={[Function]}
-                        placeholder=""
-                        style={
-                                    Object {
-                                                "color": "grey",
-                                                "fontSize": "16px",
-                                              }
-                        }
-                        type="text"
-                        value={undefined}
-            />
-</div>,
+            type="text"
+            value={undefined}
+/>,
+          undefined,
         ],
+        "className": "inputWrapper undefined",
+        "style": Object {
+          "height": "50px",
+          "width": "100%",
+        },
       },
       "ref": null,
       "rendered": Array [
@@ -158,61 +113,24 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": Array [
-              undefined,
-              <input
-                className={undefined}
-                id={undefined}
-                onBlur={[Function]}
-                onChange={null}
-                onFocus={[Function]}
-                placeholder=""
-                style={
-                                Object {
-                                                "color": "grey",
-                                                "fontSize": "16px",
-                                              }
-                }
-                type="text"
-                value={undefined}
-/>,
-              undefined,
-            ],
-            "className": "inputWrapper undefined",
+            "className": undefined,
+            "id": undefined,
+            "onBlur": [Function],
+            "onChange": null,
+            "onFocus": [Function],
+            "placeholder": "",
             "style": Object {
-              "height": "50px",
-              "width": "100%",
+              "color": "grey",
+              "fontSize": "16px",
             },
+            "type": "text",
+            "value": undefined,
           },
           "ref": null,
-          "rendered": Array [
-            undefined,
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "className": undefined,
-                "id": undefined,
-                "onBlur": [Function],
-                "onChange": null,
-                "onFocus": [Function],
-                "placeholder": "",
-                "style": Object {
-                  "color": "grey",
-                  "fontSize": "16px",
-                },
-                "type": "text",
-                "value": undefined,
-              },
-              "ref": null,
-              "rendered": null,
-              "type": "input",
-            },
-            undefined,
-          ],
-          "type": "div",
+          "rendered": null,
+          "type": "input",
         },
+        undefined,
       ],
       "type": "div",
     },
