@@ -11,4 +11,4 @@ jobs:
     - stage: "Install"
       script: npm ci
     - stage: "Test & Coverage"
-      script: npm test -- --collectCoverage=true && npm run coveralls
+      script: npm test -- -u --collectCoverage=true && npm run coveralls
