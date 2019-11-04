@@ -91,7 +91,10 @@ describe('FormLabel', () => {
   describe('[Parameter] labelText', () => {
 
     it('should not have a default value', () => {
+      let label = wrapper.find('label')
+      let innerText = label.props().children[0]
 
+      expect(innerText).toEqual(null)
     })
 
     it('should give FormLabel innerText reflecting parameter', () => {
