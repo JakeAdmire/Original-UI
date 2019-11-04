@@ -44,15 +44,24 @@ describe('FormLabel', () => {
     })
 
     it('["right"] should give FormLabel style reflecting parameter', () => {
+      wrapper.setProps({ labelPlacement: 'right' })
 
+      let label = wrapper.find('label')
+      expect(label.props().style.flexDirection).toEqual('row-reverse')
     })
 
     it('["bottom"] should give FormLabel style reflecting parameter', () => {
+      wrapper.setProps({ labelPlacement: 'bottom' })
 
+      let label = wrapper.find('label')
+      expect(label.props().style.flexDirection).toEqual('column-reverse')
     })
 
     it('["left"] should give FormLabel style reflecting parameter', () => {
+      wrapper.setProps({ labelPlacement: 'left' })
 
+      let label = wrapper.find('label')
+      expect(label.props().style.flexDirection).toEqual('row')
     })
 
   })
