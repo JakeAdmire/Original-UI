@@ -39,7 +39,8 @@ describe('FormLabel', () => {
   describe('[Parameter] labelPlacement', () => {
 
     it('should have a default value', () => {
-
+      let label = wrapper.find('label')
+      expect(label.props().style.flexDirection).toEqual('column')
     })
 
     it('["right"] should give FormLabel style reflecting parameter', () => {
