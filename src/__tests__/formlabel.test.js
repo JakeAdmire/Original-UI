@@ -3,6 +3,7 @@ import React from 'react'
 import { shallow } from 'enzyme'
 
 import { FormLabel } from '../components/FormLabel/FormLabel'
+import { TextInput } from '../components/TextInput/TextInput'
 
 describe('FormLabel', () => {
   let wrapper
@@ -17,12 +18,11 @@ describe('FormLabel', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
-  describe.skip('[Parameter] context', () => {
-
-    // wrapper.setProps({ context: <TextInput /> })
+  describe('[Parameter] context', () => {
 
     it('should not have a default value', () => {
-
+      let context = wrapper.find('label').props().children[1]
+      expect(context).toEqual(null)
     })
 
     it('should give FormLabel child element reflecting parameter', () => {
@@ -31,7 +31,27 @@ describe('FormLabel', () => {
 
   })
 
-  describe.skip('[Parameter] labelPlacement', () => {
+  describe('[Parameter] labelPlacement', () => {
+
+    it('should have a default value', () => {
+
+    })
+
+    it('["right"] should give FormLabel style reflecting parameter', () => {
+
+    })
+
+    it('["bottom"] should give FormLabel style reflecting parameter', () => {
+
+    })
+
+    it('["left"] should give FormLabel style reflecting parameter', () => {
+
+    })
+
+  })
+
+  describe('[Parameter] labelStyle', () => {
 
     it('should have a default value', () => {
 
@@ -43,19 +63,7 @@ describe('FormLabel', () => {
 
   })
 
-  describe.skip('[Parameter] labelStyle', () => {
-
-    it('should have a default value', () => {
-
-    })
-
-    it('should give FormLabel style reflecting parameter', () => {
-
-    })
-
-  })
-
-  describe.skip('[Parameter] labelText', () => {
+  describe('[Parameter] labelText', () => {
 
     it('should not have a default value', () => {
 
