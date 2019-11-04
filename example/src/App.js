@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import { TextInput, Icon } from 'original-ui'
+import { TextInput, Icon, FormLabel } from 'original-ui'
 
 export default class App extends Component {
   constructor() {
@@ -19,15 +19,19 @@ export default class App extends Component {
   render () {
     return (
       <div>
-        <TextInput 
-          placeholderText='ex. "thoughtfulpassword123..."'
-          labelText='Enter your password:' 
-          isPassInput={this.state.isTextHidden}
-          rightIcon={
-            <Icon 
+        <FormLabel
+          labelText='Enter your password:'
+          context={
+            <TextInput 
+            placeholderText='ex. "thoughtfulpassword123..."'
+            isPassInput={this.state.isTextHidden}
+            rightIcon={
+              <Icon 
               iconName={this.state.isTextHidden ? 'eye' : 'eye-slash'}
               iconSize='24px'
               onPress={this.toggleHiddenText}
+              />
+            }
             />
           }
         />

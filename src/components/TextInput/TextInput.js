@@ -5,8 +5,6 @@ import styles from './styles.css'
 
 export function TextInput({
   placeholderText = '',
-  labelText,
-  labelStyle = { color: 'orange' },
   width = '100%',
   height = '50px',
   textStyle = {
@@ -40,46 +38,34 @@ export function TextInput({
   }
 
   return (
-    <div>
+    <div
+      className={wrapperClass()}
+      style={divInlineStyles()}>
       {
-        labelText && labelText.length &&
-          <label
-            htmlFor={styles.textinput}
-            className={styles.inputlabel}
-            style={labelStyle}
-          >
-            {labelText}
-          </label>
+        leftIcon && leftIcon.props && leftIcon
       }
-      <div
-        className={wrapperClass()}
-        style={divInlineStyles()}>
-        {
-          leftIcon && leftIcon.props && leftIcon
-        }
-        <input
-          type={isPassInput ? 'password' : 'text'}
-          value={value}
-          id={styles.textinput}
-          className={styles.textinput}
-          placeholder={placeholderText}
-          style={textStyle}
-          onChange={onChange !== null ? (e) => onChange(e) : null}
-          onFocus={() => updateShadow(!isShadowShown)}
-          onBlur={() => updateShadow(!isShadowShown)}
-        />
-        {
-          rightIcon && rightIcon.props && rightIcon
-        }
-      </div>
+      <input
+        type={isPassInput ? 'password' : 'text'}
+        value={value}
+        id={styles.textinput}
+        className={styles.textinput}
+        placeholder={placeholderText}
+        style={textStyle}
+        onChange={onChange !== null ? (e) => onChange(e) : null}
+        onFocus={() => updateShadow(!isShadowShown)}
+        onBlur={() => updateShadow(!isShadowShown)}
+      />
+      {
+        rightIcon && rightIcon.props && rightIcon
+      }
     </div>
   )
 }
 
 TextInput.propTypes = {
   placeholderText: PropTypes.string,
-  labelText: PropTypes.string,
-  labelStyle: PropTypes.string,
+  // labelText: PropTypes.string,
+  // labelStyle: PropTypes.string,
   width: PropTypes.string,
   height: PropTypes.string,
   textStyle: PropTypes.string,
