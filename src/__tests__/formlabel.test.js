@@ -74,7 +74,16 @@ describe('FormLabel', () => {
     })
 
     it('should give FormLabel style reflecting parameter', () => {
+      wrapper.setProps({
+        labelStyle: {
+          color: 'blue',
+          fontWeight: 'bold'
+        }
+      })
 
+      let label = wrapper.find('label')
+      expect(label.props().style.color).toEqual('blue')
+      expect(label.props().style.fontWeight).toEqual('bold')
     })
 
   })
