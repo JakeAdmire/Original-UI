@@ -98,7 +98,13 @@ describe('FormLabel', () => {
     })
 
     it('should give FormLabel innerText reflecting parameter', () => {
+      let labelText = 'Enter A Username:'
+      wrapper.setProps({ labelText: labelText })
 
+      let label = wrapper.find('label')
+      let innerText = label.props().children[0]
+
+      expect(innerText).toEqual(labelText)
     })
 
   })
